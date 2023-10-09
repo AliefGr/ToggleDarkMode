@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-slate900 : #0f172a;
+    --clr-slate800 : #334155;
+    --clr-slate600 : #475569;
+    --clr-slate50 : #f8fafc;
+}
+
+.dark_mode{
+    --clr-slate900 : #f8fafc;
+    --clr-slate800 : #334155;
+    --clr-slate600 : #475569;
+    --clr-slate50 : #0f172a;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clr-slate900);
+}
+
+.btn_toggle{
+    background-color: var(--clr-slate800);
+    border: 2px solid var(--clr-slate600);
+    height: 44px;
+    width: 88px;
+    border-radius: 22px;
+    padding: 2px;
+    cursor: pointer;
+}
+.btn_indaktor{
+    background-color: var(--clr-slate900);
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    transition: transform 0.2s ease;
+}
+.items_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.items_icon svg{
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 2px;
+}
+.items_icon path{
+    fill: var(--clr-slate50);
+}
+
+.icon_moon{
+    display: none;
+}
+
+.dark_mode .btn_indaktor{
+    transform: translateX(44px);
+    transition: transform 0.2s ease;
+}
